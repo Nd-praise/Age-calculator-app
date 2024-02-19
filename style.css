@@ -1,0 +1,138 @@
+:root {
+    --color-Purple: hsl(259, 100%, 65%);
+    --color-Light-red: hsl(0, 100%, 67%);
+    --color-White: hsl(0, 0%, 100%);
+    --color-Off-white: hsl(0, 0%, 94%);
+    --color-Light-grey: hsl(0, 0%, 86%);
+    --color-Smokey-grey: hsl(0, 1%, 44%);
+    --color-Off-black: hsl(0, 0%, 8%);
+}
+
+@font-face {
+    font-family: pops;
+    src: url(assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: popin;
+    src: url(assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+
+@font-face {
+    font-family: popins;
+    src: url(assets/fonts/Poppins-Bold.ttf);
+}
+* {
+    font-family: pops;
+}
+
+body {
+    display: flex;
+    place-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--color-Off-white);
+}
+
+.container {
+    background-color: var(--color-White);
+    width: 420px;
+    border-radius: 1rem 1rem 10rem;
+    padding: 40px;
+    max-width: 80%;
+    position: relative;
+}
+
+input {
+    width: 70px;
+    padding: 10%;
+    border-radius: 5px;
+    border: 2px solid var(--color-Off-white);
+    outline: none;
+    font-family: popins;
+}
+
+input:focus {
+    border: 2px solid var(--color-Purple);
+}
+
+small {
+    color: var(--color-Light-red);
+    font-size: 0.6rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+
+.submit-btn {
+    background-color: var(--color-Purple);
+    border: none;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 30px;
+    top: 7.5rem;
+}
+
+.submit-btn:hover {
+    background-color: var(--color-Off-black);
+}
+
+.submit-btn img {
+    padding: 2px;
+    margin: 2px;
+}
+
+.output span {
+    color: var(--color-Purple);
+    font-size: 2.7rem;
+    font-style: italic;
+}
+
+.output h1 {
+    font-family: popin;
+    font-weight: 900;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-bottom: 20px;
+} 
+
+.input-flex {
+    display: flex;
+    border-bottom: 2px solid var(--color-Off-white);
+    margin-bottom: 30px;
+}
+
+.output {
+    margin-top: -30px;
+}
+
+@media (max-width:765px) {
+    input {
+        width: 80%;
+        top: 14rem
+    }
+    .output span {
+        font-size: 1.7rem;
+    }
+    .input-flex {
+        border-bottom: 1px solid var(--color-Off-white);
+    }
+    .submit-btn {
+        height: 20px;
+        width: 20px;
+        left: 10rem;
+    }
+    .submit-btn img {
+        transform: scale(0.5);
+    }
+}
